@@ -81,5 +81,7 @@ dataFrame = pd.read_csv(file_path)
 #顯示標題
 st.title("台灣個縣市氣候:")
 st.subheader("攝氐")
-#顯非DataFrame
+#顯示DataFrame
 st.dataframe(dataFrame,width=800,height=900)
+st.line_chart(dataFrame,x='城市',y=['最高溫度','最低溫度','感覺'])
+st.bar_chart(dataFrame,x='城市',y=['最高溫度','最低溫度'])
